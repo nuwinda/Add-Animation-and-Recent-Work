@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Romantic & Allegiant Wedding",
+    "couple": "Sarah & Michael",
+    "date": "March 2026",
+    "location": "Galle Fort, Sri Lanka",
+    "category": "Weddings",
+    "description": "A beautiful celebration of love overlooking the Indian Ocean. This intimate wedding captured the essence of romance with golden hour portraits and candid moments.",
+    "images": ["d6357cb650e2c6271722681aca236642dcf18f9e", "f0e39d0b53feea740b40eb7a86c70cf6af47236b", "eef414e003559a055e07cfa1501cee7456af6ebc"]
+  },
+  {
+    "id": 2,
+    "title": "Garden Romance",
+    "couple": "Amaya & Kasun",
+    "date": "February 2026",
+    "location": "Kandy, Sri Lanka",
+    "category": "Weddings",
+    "description": "Surrounded by lush gardens and traditional elegance, this wedding was a perfect blend of cultural heritage and modern romance.",
+    "images": ["cecd0d25b58b5923a9a3869068e4100c512ad43d", "3a03317223e0ad3689b248e0e5afa2fbd66913c1", "e2ce841658d34aec49bcb135cae4c7fb72387fbc"]
+  },
+  {
+    "id": 3,
+    "title": "Beachside Bliss",
+    "couple": "Wikum & Sachini",
+    "date": "January 2026",
+    "location": "Bentota Beach, Sri Lanka",
+    "category": "Destination",
+    "description": "Waves, sand, and endless love. This beachside ceremony captured the wild and free spirit of a couple deeply in love.",
+    "images": ["6e96637162a99a3f708709831dbe3955eb765b69", "d6357cb650e2c6271722681aca236642dcf18f9e", "f0e39d0b53feea740b40eb7a86c70cf6af47236b"]
+  },
+  {
+    "id": 4,
+    "title": "Mountain Majesty",
+    "couple": "Nadun & Dilani",
+    "date": "December 2025",
+    "location": "Nuwara Eliya, Sri Lanka",
+    "category": "Destination",
+    "description": "High in the misty mountains, this couple exchanged vows surrounded by tea plantations and rolling hills.",
+    "images": ["eef414e003559a055e07cfa1501cee7456af6ebc", "cecd0d25b58b5923a9a3869068e4100c512ad43d", "3a03317223e0ad3689b248e0e5afa2fbd66913c1"]
+  },
+  {
+    "id": 5,
+    "title": "Heritage & Heart",
+    "couple": "Ravindu & Tharushi",
+    "date": "November 2025",
+    "location": "Colombo, Sri Lanka",
+    "category": "Cultural",
+    "description": "A grand celebration honoring tradition while embracing contemporary love. Every moment was filled with joy and cultural richness.",
+    "images": ["e2ce841658d34aec49bcb135cae4c7fb72387fbc", "6e96637162a99a3f708709831dbe3955eb765b69", "d6357cb650e2c6271722681aca236642dcf18f9e"]
+  },
+  {
+    "id": 6,
+    "title": "Sunset Serenade",
+    "couple": "Chamara & Nethmini",
+    "date": "October 2025",
+    "location": "Mirissa, Sri Lanka",
+    "category": "Pre-Wedding",
+    "description": "As the sun dipped into the ocean, two souls became one. This magical evening was painted in hues of gold and orange.",
+    "images": ["f0e39d0b53feea740b40eb7a86c70cf6af47236b", "eef414e003559a055e07cfa1501cee7456af6ebc", "cecd0d25b58b5923a9a3869068e4100c512ad43d"]
+  }
+]
