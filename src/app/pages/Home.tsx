@@ -16,11 +16,12 @@ function HeroSection() {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.3]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.85, 0.2]);
 
   return (
-    <section ref={ref} className="relative h-screen overflow-hidden" style={{ position: 'relative' }}>
+    <section ref={ref} className="relative h-screen overflow-hidden bg-gradient-to-b from-[#f8f6f1] to-white">
+      {/* Background Image with Parallax */}
       <motion.div style={{ y, opacity }} className="absolute inset-0">
         <div className="relative w-full h-full">
           <img
@@ -28,48 +29,99 @@ function HeroSection() {
             alt="Hero"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.3)]" />
         </div>
       </motion.div>
 
+      {/* Luxury Accent Line */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+        className="absolute left-[8.33%] top-[35%] w-12 h-px bg-[#ede0c2] origin-left z-20"
+      />
+
+      {/* Hero Content Container */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        className="absolute left-[16.67%] top-1/3 z-10 text-[rgba(0,0,0,0.85)]"
+        transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        className="absolute left-[8.33%] top-[40%] z-10 max-w-2xl"
       >
+        {/* Main Headline */}
+        <div className="mb-8 space-y-1">
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+            className="font-['Gentium_Basic'] italic text-7xl font-normal tracking-wide text-[#030213]"
+          >
+            VISUAL
+          </motion.h1>
+          
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.85, ease: [0.25, 0.1, 0.25, 1] }}
+            className="font-['Gentium_Book_Basic'] text-7xl font-normal tracking-wide text-[#030213]"
+          >
+            STORYTELLER
+          </motion.h1>
+        </div>
+
+        {/* Divider */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          className="h-px bg-[#030213] w-16 my-6 origin-left"
+        />
+
+        {/* Secondary Headline */}
+        <div className="space-y-1">
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="font-['Gentium_Book_Basic'] text-6xl font-normal tracking-wide text-[#030213]"
+          >
+            FOR THE
+          </motion.h2>
+          
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 1.25, ease: [0.25, 0.1, 0.25, 1] }}
+            className="font-['Gentium_Basic'] italic text-6xl font-normal tracking-wide text-[#030213]"
+          >
+            WILDLY IN LOVE
+          </motion.h2>
+        </div>
+
+        {/* Tagline */}
         <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="font-['Gentium_Basic'] italic text-5xl mb-2 tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.4, ease: [0.25, 0.1, 0.25, 1] }}
+          className="font-['Inria_Serif'] text-lg font-light text-[#717182] mt-8 tracking-normal max-w-xl leading-relaxed"
         >
-          VISUAL
+          Capturing moments of pure connection and authentic emotion
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="font-['Gentium_Book_Basic'] text-5xl mb-2 tracking-tight"
-        >
-          STORYTELLER
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="font-['Gentium_Book_Basic'] text-5xl mb-2 tracking-tight"
-        >
-          FOR THE WILDLY
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="font-['Gentium_Basic'] italic text-5xl tracking-tight"
-        >
-          IN LOVE
-        </motion.p>
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.8 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+      >
+        <span className="font-['Inria_Serif'] text-sm text-[#717182] tracking-widest uppercase">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-px h-8 bg-gradient-to-b from-[#030213] to-transparent"
+        />
       </motion.div>
     </section>
   );
